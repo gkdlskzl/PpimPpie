@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #f0f0f0</string>
+  </property>
+  <widget class="QPushButton" name="befo_btn">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>170</y>
+     <width>391</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>브로트 포스</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dos_btn">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>220</y>
+     <width>391</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>도스</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="w_shall_btn">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>270</y>
+     <width>391</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>웹쉘</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>320</y>
+     <width>391</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>삠삐 설명서</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>410</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>설정</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit_btn">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>460</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #dee2e6;
+    border: 2px solid white;
+    color: black;
+    padding: 5px;
+    min-height: 25px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: #dee2e6;
+    border: 2px solid #0000ff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>삠삐 종료</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>570</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: black;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>PPimPPie 0.0.0/demo.ver (기능 7(3)개)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>580</y>
+     <width>241</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: black;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Copyright Minki PK, Do not distrbute!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>50</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bernard MT Condensed</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: white;
+    color: blue;
+	border: 1px solid blue;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>PPIMPPIE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>휴먼옛체</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+/*    background-color: black; */
+    color: yellow;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>WebToolYee EDITION</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>590</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: white;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>PPimPPie 1.0.0/tools (기능 7개)</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,40 @@
+/* 모든 버튼에 적용되는 기본 스타일 */
+QPushButton {
+    background-color: rgba(128, 128, 128, 180);
+    border: 2px solid #2d2d2d;
+    color: white;
+    padding: 5px;
+    min-height: 40px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: rgba(158, 158, 158, 200);
+    border: 2px solid #ffffff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}
+
+/* 레이블 스타일 */
+/* QLabel {
+    color: white;
+    font-family: Arial;
+} */
+
+/* 특정 ID를 가진 레이블에 대한 스타일 */
+/* QLabel#titleLabel {
+    font-size: 24pt;
+    font-weight: bold;
+} */
+
+/* 특정 클래스를 가진 버튼에 대한 스타일 */
+/* QPushButton[class="bottom-button"] {
+    max-width: 200px;
+    min-height: 30px;
+} */

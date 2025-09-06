@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>595</width>
+    <height>251</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(0, 0, 0);
+</string>
+  </property>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>551</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bernard MT Condensed</family>
+     <pointsize>48</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: black;
+    color: #33FF33;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>BRUTE FORCE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>130</y>
+     <width>301</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(128, 128, 128, 180);
+    border: 2px solid #2d2d2d;
+    color: white;
+    padding: 5px;
+    min-height: 40px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: rgba(158, 158, 158, 200);
+    border: 2px solid #ffffff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>Public</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>130</y>
+     <width>301</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(128, 128, 128, 180);
+    border: 2px solid #2d2d2d;
+    color: white;
+    padding: 5px;
+    min-height: 40px;
+    max-width: 400px;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+QPushButton:hover {
+    background-color: rgba(158, 158, 158, 200);
+    border: 2px solid #ffffff;
+}
+
+/* 버튼을 클릭했을 때 */
+QPushButton:pressed {
+    background-color: rgba(98, 98, 98, 180);
+}</string>
+   </property>
+   <property name="text">
+    <string>Cookie or Session</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

