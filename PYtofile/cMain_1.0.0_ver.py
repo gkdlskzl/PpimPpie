@@ -33,8 +33,9 @@ import os
 # form_class_2 = uic.loadUiType("key_check.ui")[0]
 
 
-#=============================================================
+#============================================================= 로딩화면
 class WindowClass(QMainWindow, first_loading_Ui_Form) : 
+
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
@@ -63,7 +64,7 @@ class WindowClass(QMainWindow, first_loading_Ui_Form) :
         self.inputkey = Key_check()
         self.close()
         self.inputkey.show()
-#=============================================================
+#============================================================= 키 인증화면
 class Key_check(QMainWindow, Key_input_Ui_Form) :
     def __init__(self):
         super().__init__()
@@ -88,6 +89,7 @@ class Key_check(QMainWindow, Key_input_Ui_Form) :
         self.title = ppimppie_title()
         self.close()
         self.title.show()
+
 class Key_check_for_bruteforce(QMainWindow, Key_input_Ui_Form) :
     def __init__(self):
         super().__init__()
@@ -112,7 +114,30 @@ class Key_check_for_bruteforce(QMainWindow, Key_input_Ui_Form) :
         self.title = bruteforce()
         self.close()
         self.title.show()
+class Key_check_for_Dos(QMainWindow, Key_input_Ui_Form) :
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
 
+        self.lineEdit.setEchoMode(QLineEdit.Password)
+        
+        self.lineEdit.returnPressed.connect(self.check_key)
+        self.btn2.clicked.connect(self.check_key)
+
+    def check_key(self) :
+        # text = self.lineEdit.toPlainText()
+        text = self.lineEdit.text()
+        # print(text)
+        if text == "5536" :
+            print("open")
+            self.open()
+        else : 
+            print("fall")
+
+    def open(self) :
+        self.title = dos_choice()
+        self.close()
+        self.title.show()
 
 class ppimppie_title(QMainWindow, ppimppie_title_Ui_Form) : 
     def __init__(self) :
@@ -135,7 +160,7 @@ class ppimppie_title(QMainWindow, ppimppie_title_Ui_Form) :
         self.befo.show()
 
     def Dos(self) :
-        self.dos = dos_choice()
+        self.dos = Key_check_for_Dos()
         self.dos.show()
 
     def webshall(self) :
@@ -188,6 +213,7 @@ class dos_choice(QMainWindow, Dosat_Ui_Form):
         self.test = Smurf()
         self.test.show()
 
+
 # ========================================= Dos
 class Dos(QMainWindow, Dos_Ui_Form):
     def __init__(self):
@@ -208,7 +234,7 @@ class Dos(QMainWindow, Dos_Ui_Form):
         self.Trd = 0
         self.fake_ip = ""
         self.attack_threads = []  # 실행 중인 쓰레드 관리용 리스트
-# =======================================================================================
+# ======================================================================================= 잠금
     def notyet(self) :
         QMessageBox.information(self, "도스공격", "해당 기능은 막혀있습니다.")
 # =======================================================================================
@@ -280,6 +306,7 @@ class AttackThread(QThread):
         self.running = False
 # =========================================
 
+
 # ========================================= Ping of death
 class p_o_d(QMainWindow, Dos_Ui_Form):
     def __init__(self):
@@ -325,6 +352,7 @@ class p_o_d(QMainWindow, Dos_Ui_Form):
         except Exception as e:
             self.textBrowser.append(f"[ERROR] An error occurred: {e}")
 # =========================================
+
 
 # ========================================= land_attack
 class Land_attack(QMainWindow, Dos_Ui_Form):
@@ -380,6 +408,7 @@ class Land_attack(QMainWindow, Dos_Ui_Form):
         except Exception as e:
             self.textBrowser.append(f"[ERROR] An error occurred: {e}")
 # =========================================
+
 
 # ========================================= SYN_flooding
 class SynFloodThread(QThread):
@@ -483,6 +512,7 @@ class Syn_flooding(QMainWindow, Dos_Ui_Form):
             self.syn_thread.wait()
             self.textBrowser.append("\n[INFO] SYN Flood attack stopped.")
 # ========================================= 
+
 
 # ========================================= Smurf
 class SmurfAttackThread(QThread):
@@ -595,6 +625,7 @@ class Smurf(QMainWindow, Dos_Ui_Form):
             self.smurf_thread.wait()
             self.textBrowser.append("[INFO] Smurf Attack stopped.")
 # ========================================= 
+
 
 # ========================================= bruteforce
 class bruteforce(QMainWindow, brute_force_Ui_Form) :
@@ -923,6 +954,7 @@ class Webshall(QMainWindow, web_shall_Ui_Form):
         super().__init__()
         self.setupUi(self)
 # ========================================= 
+
 
 app = QApplication(sys.argv)
 mywindow = WindowClass()
